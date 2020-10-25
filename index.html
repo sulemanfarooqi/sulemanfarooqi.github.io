@@ -1,28 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Suleman's Mindspace</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
 <body>
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="left-side">
+        <div class="nav-link-wrapper active-nav-link">
+          <a href="index.html">Home</a>
+        </div>
 
-<h1>Introduction</h1>
-<img src="capture.jpg" alt="W3Schools.com"  height="250">
-<p>Hey there! Welcome to my website. My name is Suleman Farooqi, there is a lot that I do throughout my free days but lately I've been occupied with school mostly.
-<br>I'm graduating in December 2020 with a Bachelor's in Computer Science and aiming to get myself a job as soon as I graduate.
-<br> A few of my hobbies consist of 
-<ul>
-	<li>Photography</li>
-	<li>Music Production</li>
-	<li>Videography</li>
-	<li>Track Racing</li>
-	<li>Arduino Projects</li>
-    <li>Again</li>
-</ul>
-<br>I will be adding more information on this website as time progresses. This also includes any projects that I'm working on.
-<br>Creating a website for yourself is very helpful since it displays the goals that you have achieved, so it's a good way to
-<br>keep records of what you're doing, share what you're doing with the world and also helps you in becoming better at writing
-<br>your thoughts down. You can also recieve a good amount of feedback from people and that can help in linking you with others.
-</p>
+        <div class="nav-link-wrapper">
+          <a href="about.html">About</a>
+        </div>
+      </div>
 
-<a href="https://www.w3schools.com">You can learn about HTML from W3schools.com</a>
-<br>
+      <div class="middle">
+          <div class="nav-heading">
+            Site is under construction!
+              Last Updated October 24th 2020
+          </div>
+      </div>
+        
+      <div class="right-side">
+        <div class="brand">
+          SULEMAN FAROOQI
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="portfolio-items-wrapper">
+
+        <a href="https://github.com/sulemanfarooqi" class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/portfolio9.jpg)"></div>
+
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="images/logos/github.png" alt="">
+            </div>
+
+            <div class="subtitle">You can find all my GitHub projects right here!</div>
+          </div>
+        </a>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/arduino.png)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="images/logos/arduino.png" alt="">
+            </div>
+
+            <div class="subtitle">Arduino and Raspberry Pi blogs projects and blogs will be posted, check my GitHub for the source code</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/portfolio.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="images/logos/eventbrit.png" alt="">
+            </div>
+
+            <div class="subtitle"></div>
+          </div>
+        </div>
+
+        <a class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/photography.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="images/logos/shop-hackr.png" alt="">
+            </div>
+
+            <div class="subtitle">You can find some of the pictures I have captured, for some of them I will explain the thought process both pre and post editing</div>
+          </div>
+        </a>
+
+        <a class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/portfol5.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="images/logos/cronse.png" alt="">
+            </div>
+
+            <div class="subtitle"></div>
+          </div>
+        </a>
+
+        <a href="https://www.soundcloud.com/strivik" class="portfolio-item-wrapper" >
+          <div class="portfolio-img-background" style="background-image:url(images/music.jpg)" href="https://soundcloud.com/strivik"></div>
+          <div class="img-text-wrapper">
+              
+            <div class="logo-wrapper">
+              
+              <img src="images/logos/soundcloud.png">
+            </div>
+
+            <div class="subtitle">Some of the tracks that I might release once a year or so.</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
 
 </body>
+
+<script>
+  const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+
+  portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.add('image-blur');
+    });
+
+    portfolioItem.addEventListener('mouseout', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.remove('image-blur');
+    });
+  });
+
+</script>
+
 </html>
